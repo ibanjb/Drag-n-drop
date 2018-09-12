@@ -1,0 +1,264 @@
+{
+    "results": [{
+        "gender": "female",
+        "name": {
+            "title": "miss",
+            "first": "katie",
+            "last": "collins"
+        },
+        "location": {
+            "street": "3654 manchester road",
+            "city": "cambridge",
+            "state": "devon",
+            "postcode": "NC70 9ZE",
+            "coordinates": {
+                "latitude": "-63.0824",
+                "longitude": "0.8506"
+            },
+            "timezone": {
+                "offset": "-11:00",
+                "description": "Midway Island, Samoa"
+            }
+        },
+        "email": "katie.collins@example.com",
+        "login": {
+            "uuid": "82405624-ae79-4027-a72c-a00ca5cb32cd",
+            "username": "silvermouse105",
+            "password": "bull",
+            "salt": "6DJchDOB",
+            "md5": "326b9f3faf54887452796040931d8c35",
+            "sha1": "4fbe5606652c4864a679f8fb93fe0ec85232734a",
+            "sha256": "d7985d8ecdac9f051ea2002dccb692386d8a9393c8b67929a4818b9dd4361f46"
+        },
+        "dob": {
+            "date": "1944-09-21T01:39:51Z",
+            "age": 73
+        },
+        "registered": {
+            "date": "2015-04-27T12:17:03Z",
+            "age": 3
+        },
+        "phone": "0118780 598 2115",
+        "cell": "0793-921-819",
+        "id": {
+            "name": "NINO",
+            "value": "HN 68 23 76 B"
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/women/66.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/66.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/66.jpg"
+        },
+        "nat": "GB"
+    }, {
+        "gender": "female",
+        "name": {
+            "title": "ms",
+            "first": "teresa",
+            "last": "hudson"
+        },
+        "location": {
+            "street": "6363 the grove",
+            "city": "westminster",
+            "state": "gloucestershire",
+            "postcode": "WW36 6GF",
+            "coordinates": {
+                "latitude": "-48.8671",
+                "longitude": "-135.4536"
+            },
+            "timezone": {
+                "offset": "+10:00",
+                "description": "Eastern Australia, Guam, Vladivostok"
+            }
+        },
+        "email": "teresa.hudson@example.com",
+        "login": {
+            "uuid": "cab7b035-dbd0-48fd-b119-f48effd7346d",
+            "username": "happyostrich751",
+            "password": "gaston",
+            "salt": "lT4jWG4b",
+            "md5": "efce1ccc84b48f283b7c94d06d751609",
+            "sha1": "aeb595d26e0e5309cfb59d3afb657725053ded96",
+            "sha256": "9b2c0d9daf8dc3e2b3bc4e5aa1ed7bd3076ce8e1116d85f341003992b7b4438f"
+        },
+        "dob": {
+            "date": "1965-07-08T00:41:29Z",
+            "age": 53
+        },
+        "registered": {
+            "date": "2009-12-04T23:30:58Z",
+            "age": 8
+        },
+        "phone": "016977 30680",
+        "cell": "0738-293-934",
+        "id": {
+            "name": "NINO",
+            "value": "BZ 19 83 25 O"
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/women/59.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/59.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/59.jpg"
+        },
+        "nat": "GB"
+    }, {
+        "gender": "female",
+        "name": {
+            "title": "ms",
+            "first": "nicole",
+            "last": "reed"
+        },
+        "location": {
+            "street": "1383 queens road",
+            "city": "stoke-on-trent",
+            "state": "strathclyde",
+            "postcode": "M64 2LZ",
+            "coordinates": {
+                "latitude": "-31.7060",
+                "longitude": "43.7978"
+            },
+            "timezone": {
+                "offset": "+9:00",
+                "description": "Tokyo, Seoul, Osaka, Sapporo, Yakutsk"
+            }
+        },
+        "email": "nicole.reed@example.com",
+        "login": {
+            "uuid": "576b9dd0-7223-46ff-871f-335e055ab4bd",
+            "username": "crazyrabbit911",
+            "password": "printer",
+            "salt": "Ypp81ClE",
+            "md5": "68db7e178cb45b07f4cb1820ca1c49eb",
+            "sha1": "c08e1368141fac66ebf1d76db8e593b3145df7c4",
+            "sha256": "665212af5dff94bc28922b68ce2072f165d3a2c270e4c61f01075c230a99f8d8"
+        },
+        "dob": {
+            "date": "1950-02-04T21:35:19Z",
+            "age": 68
+        },
+        "registered": {
+            "date": "2007-09-22T20:03:30Z",
+            "age": 10
+        },
+        "phone": "015394 91082",
+        "cell": "0736-709-684",
+        "id": {
+            "name": "NINO",
+            "value": "ET 53 85 23 N"
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/women/21.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/21.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/21.jpg"
+        },
+        "nat": "GB"
+    }, {
+        "gender": "female",
+        "name": {
+            "title": "mrs",
+            "first": "charlotte",
+            "last": "stanley"
+        },
+        "location": {
+            "street": "8158 manchester road",
+            "city": "chichester",
+            "state": "west sussex",
+            "postcode": "LY6X 1BR",
+            "coordinates": {
+                "latitude": "25.8116",
+                "longitude": "-98.8108"
+            },
+            "timezone": {
+                "offset": "+4:00",
+                "description": "Abu Dhabi, Muscat, Baku, Tbilisi"
+            }
+        },
+        "email": "charlotte.stanley@example.com",
+        "login": {
+            "uuid": "c19a84b7-c1a5-42b4-96b2-955d84d88141",
+            "username": "yellowmeercat413",
+            "password": "freddy",
+            "salt": "Bw9Mdmec",
+            "md5": "2aca803d14753058cb3c63ea9a793c21",
+            "sha1": "cbb30c23cd024d052d3e86b3daac73565e9dcd38",
+            "sha256": "c621ed62e5ce10106c119f76861ccfdfc58ef19d9dc07a04d9eff3ccf292689b"
+        },
+        "dob": {
+            "date": "1974-11-23T02:01:33Z",
+            "age": 43
+        },
+        "registered": {
+            "date": "2006-06-13T20:54:31Z",
+            "age": 12
+        },
+        "phone": "019467 45242",
+        "cell": "0759-948-998",
+        "id": {
+            "name": "NINO",
+            "value": "XP 52 77 64 I"
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/women/43.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/43.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/43.jpg"
+        },
+        "nat": "GB"
+    }, {
+        "gender": "male",
+        "name": {
+            "title": "mr",
+            "first": "luke",
+            "last": "ellis"
+        },
+        "location": {
+            "street": "7918 kingsway",
+            "city": "inverness",
+            "state": "dumfries and galloway",
+            "postcode": "Q83 7WW",
+            "coordinates": {
+                "latitude": "61.0369",
+                "longitude": "-109.3729"
+            },
+            "timezone": {
+                "offset": "+5:00",
+                "description": "Ekaterinburg, Islamabad, Karachi, Tashkent"
+            }
+        },
+        "email": "luke.ellis@example.com",
+        "login": {
+            "uuid": "d2e5f31d-2f38-4b30-8ff8-eb13b01981c1",
+            "username": "blackgoose820",
+            "password": "fischer",
+            "salt": "cvKrU2Yb",
+            "md5": "ae214150f641f30667f29254f73e81a7",
+            "sha1": "13fb59c31cfbb0829b9a334c17410bdc802d7506",
+            "sha256": "7510aab9e5a269c8b771f5dab9049944a36845af831551eba87b72d570f003c3"
+        },
+        "dob": {
+            "date": "1987-02-27T15:50:08Z",
+            "age": 31
+        },
+        "registered": {
+            "date": "2016-02-13T00:20:37Z",
+            "age": 2
+        },
+        "phone": "01161 36333",
+        "cell": "0779-227-822",
+        "id": {
+            "name": "NINO",
+            "value": "TS 93 62 23 N"
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/59.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/59.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/59.jpg"
+        },
+        "nat": "GB"
+    }],
+    "info": {
+        "seed": "33077e5f64380768",
+        "results": 5,
+        "page": 1,
+        "version": "1.2"
+    }
+}
