@@ -47,6 +47,7 @@ Try to progress as far as you can in 2 hours. Feel free to share your thoughts a
 ### To improve
 
 - Styles for each "user" component
+  - Move the user component outside the Drag object
 - Finish Docker file
 
 ### Out of scope
