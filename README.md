@@ -49,5 +49,9 @@ Try to progress as far as you can in 2 hours. Feel free to share your thoughts a
 - Styles for each "user" component
 - Finish Docker file
 
+### Out of scope
+
+- Add redux. Until we don't have an API available to reflect changes this modification will not be done
+
 ![Sample](sample.png)
 
