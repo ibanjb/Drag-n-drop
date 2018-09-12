@@ -1,6 +1,13 @@
 # React assignment
 
-## Crew applications
+# Exercise
+
+![Completed](https://img.shields.io/badge/Completed-25%25-orange.svg) 
+![ES6](https://img.shields.io/badge/React-16.4.1-blue.svg) 
+![eslint](https://img.shields.io/badge/eslint-air--bnb-brightgreen.svg) 
+![UnitTest](https://img.shields.io/badge/Unit%20tests-Pending-red.svg) 
+![Docker](https://img.shields.io/badge/Docker-WIP-yellow.svg) 
+
 
 ### Requirements
 
@@ -29,3 +36,18 @@ Try to progress as far as you can in 2 hours. Feel free to share your thoughts a
 - use of code quality enhancer such as linters and flow-type
 - use of git, appropriate commit messages
 - documentation: README and inline code comments
+
+## WIP. Status
+
+### Missing points
+
+- Drag'n'drop between columns
+- Add unit tests
+
+### To improve
+
+- Styles for each "user" component
+- Finish Docker file
+
+![Sample](sample.png)
+
