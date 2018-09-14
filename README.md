@@ -2,11 +2,12 @@
 
 # Exercise
 
-![Completed](https://img.shields.io/badge/Completed-25%25-orange.svg) 
+![Completed](https://img.shields.io/badge/Completed-99%25-orange.svg) 
 ![ES6](https://img.shields.io/badge/React-16.4.1-blue.svg) 
-![eslint](https://img.shields.io/badge/eslint-air--bnb-brightgreen.svg) 
+![eslint](https://img.shields.io/badge/eslint-air--bnb-%23ff69b4.svg) 
+![Docker](https://img.shields.io/badge/Docker-Done-brightgreen.svg) 
 ![UnitTest](https://img.shields.io/badge/Unit%20tests-Pending-red.svg) 
-![Docker](https://img.shields.io/badge/Docker-WIP-yellow.svg) 
+![Flow](https://img.shields.io/badge/Flow-Pending-red.svg) 
 
 
 ### Requirements
@@ -37,18 +38,13 @@ Try to progress as far as you can in 2 hours. Feel free to share your thoughts a
 - use of git, appropriate commit messages
 - documentation: README and inline code comments
 
-## WIP. Status
+
+## WIP. Current status
 
 ### Missing points
 
-- Drag'n'drop between columns
-- Add unit tests
-
-### To improve
-
-- Styles for each "user" component
-  - Move the user component outside the Drag object
-- Finish Docker file
+- Add unit tests with Jest (https://jestjs.io)
+- Add flow types (https://flow.org)
 
 ### Out of scope
 

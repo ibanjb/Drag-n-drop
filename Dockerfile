@@ -2,24 +2,20 @@
 FROM node:9.11
 ENV NODE_ENV production
 
-# set working directory
-RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
+# The base node image sets a very verbose log level.
+ENV NPM_CONFIG_LOGLEVEL warn
 
-# add '/usr/src/app/node_modules/.bin' to $PATH
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
+# Copy all local files into the image.
+COPY . .
 
-# copy source code
-COPY . /usr/src/app
+# Build for production.
+RUN npm run build --production
 
-# install and cache app dependencies
-RUN npm install --production --silent
-RUN npm run build
-RUN npm install -g apidoc 
-RUN npm run docs
-RUN ls -la /usr/src/app/dist
+# Install `serve` to run the application.
+RUN npm install -g serve
 
-# start app
-# CMD node /usr/src/app/dist/server.js
+# Set the command to start the node server.
+CMD serve -s build
 
-EXPOSE 3000
+# Tell Docker about the port we'll run on.
+EXPOSE 5000
