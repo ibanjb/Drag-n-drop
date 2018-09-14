@@ -1,0 +1,12 @@
+.userBox {
+  display: flex;
+  flex-direction: row;
+}
+
+.userName {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: left;
+  margin-left: 20px;
+}

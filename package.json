@@ -5,12 +5,14 @@
   "license": "ISC",
   "private": true,
   "dependencies": {
-    "react": "^16.4.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.0",
     "react-beautiful-dnd": "^9.0.2",
-    "react-dom": "^16.4.1",
+    "react-dom": "^16.5.0",
     "react-scripts": "1.1.4"
   },
   "devDependencies": {
+    "babel-eslint": "^9.0.0",
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
