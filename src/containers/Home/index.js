@@ -34,6 +34,15 @@ export default class Home extends Component {
       });
   }
 
+  renderLoading() {
+    return (
+      <span>
+        <p>Loading</p>
+        <i className="fa fa-spinner fa-spin" />
+      </span>
+    );
+  }
+
   renderItems() {
     const { items } = this.state;
     return (
@@ -46,8 +55,8 @@ export default class Home extends Component {
   render() {
     const { isLoading } = this.state;
     return (
-      <div className="App">
-        {isLoading && <span>Loading...</span>}
+      <div className="Home">
+        {isLoading && (this.renderLoading())}          
         {!isLoading && (this.renderItems())}
       </div>
     );

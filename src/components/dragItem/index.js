@@ -2,14 +2,30 @@ import React from 'react';
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 import PropTypes from 'prop-types';
 import User from '../user';
+import dragdrop from '../../assets/images/dragdrop.png';
+import './DragItem.css';
 
 class DragItem extends React.Component {
 
-  constructor(props) {
-    super(props);
+  renderEmpty() {
+    const { type, getListStyle } = this.props;
+    return (
+      <Droppable droppableId={type}>
+        {(outerProvided, outerSnapshot) => (
+          <div 
+            className="emptyBox"
+            ref={outerProvided.innerRef}
+            style={getListStyle(outerSnapshot.isDraggingOver)}
+          >
+            <img src={dragdrop} alt="dragndrop" />
+            {outerProvided.placeholder}
+          </div>
+        )}
+      </Droppable>
+    );
   }
 
-  render() {
+  renderItem() {
     const { type, items, getListStyle, getItemStyle } = this.props;
     return (
       <Droppable droppableId={type}>
@@ -39,6 +55,20 @@ class DragItem extends React.Component {
           </div>
         )}
       </Droppable>
+    );
+  }
+
+  render() {    
+    const { items } = this.props;
+    let isEmpty = true;
+    if (items.length > 0) {
+      isEmpty = false;
+    }
+    return (
+      <div>
+        {isEmpty && (this.renderEmpty())}
+        {!isEmpty && (this.renderItem())}
+      </div>      
     );
   }
 }

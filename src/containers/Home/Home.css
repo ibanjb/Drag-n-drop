@@ -1,3 +1,15 @@
-.App {
+.Home {
     margin: auto;
+}
+
+.Home span {
+    font-family: 'Font Awesome';
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.Home span i {
+    font-family: 'Font Awesome';
+    font-size: 48px;
+    color: #ffffff;
 }

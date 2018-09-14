@@ -16,7 +16,7 @@ class User extends React.Component {
     const { user } = this.state;
     return (
       <div className="userBox">
-        <img src={user.picture.thumbnail} alt={user.name.last} />
+        <img className="img-circle" src={user.picture.thumbnail} alt={user.name.last} />
         <div className="userName">
           <div> 
             {' '}

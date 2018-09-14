@@ -1,6 +1,9 @@
 .userBox {
   display: flex;
   flex-direction: row;
+  background-color: aliceblue;
+  padding: 10px 0 10px 0;
+  box-shadow: 10px 13px 14px -9px rgba(126,159,194,0.69); 
 }
 
 .userName {
@@ -8,5 +11,9 @@
   flex-direction: column;
   text-align: left;
   justify-content: left;
-  margin-left: 20px;
+  margin-left: 20px;  
+}
+
+.img-circle {
+  border-radius: 50%;
 }

@@ -38,15 +38,16 @@ class Drag extends React.Component {
   }  
 
   getListStyle = isDraggingOver => ({
-    background: isDraggingOver ? 'lightblue' : 'lightgrey',
+    background: isDraggingOver ? '#06679a' : '#06679a',
     padding: 8,  
   });
 
   getItemStyle = (isDragging, draggableStyle) => ({    
     userSelect: 'none',
     padding: 16,
-    margin: `0 0 8px 0`,
-    background: isDragging ? '#fff' : '#06679a',
+    margin: '0 0 8px 0',
+    border: '1px solid #aabbcc',
+    background: isDragging ? '#ffffff' : '#ffffff',
     ...draggableStyle,
   });
 
