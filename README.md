@@ -43,7 +43,6 @@ Try to progress as far as you can in 2 hours. Feel free to share your thoughts a
 
 ### Missing points
 
-- Add unit tests with Jest (https://jestjs.io)
 - Add flow types (https://flow.org)
 
 ### Out of scope
@@ -51,4 +50,9 @@ Try to progress as far as you can in 2 hours. Feel free to share your thoughts a
 - Add redux. Until we don't have an API available to reflect changes this modification will not be done
 
 ![Sample](sample.png)
+
+### Code coverage status
+
+![Coverage](codecoverage.png)
+
 
