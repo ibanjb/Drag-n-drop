@@ -3,12 +3,12 @@
 # Exercise
 
 ![Completed](https://img.shields.io/badge/Completed-99%25-orange.svg) 
+![UnitTest](https://img.shields.io/badge/unit%20tests-jest-brightgreen.svg) 
+![Coverage](https://img.shields.io/badge/test%20coverage-33%25-yellow.svg) 
 ![ES6](https://img.shields.io/badge/React-16.4.1-blue.svg) 
 ![eslint](https://img.shields.io/badge/eslint-air--bnb-%23ff69b4.svg) 
 ![Docker](https://img.shields.io/badge/Docker-Done-brightgreen.svg) 
-![UnitTest](https://img.shields.io/badge/Unit%20tests-Pending-red.svg) 
 ![Flow](https://img.shields.io/badge/Flow-Pending-red.svg) 
-
 
 ### Requirements
 
