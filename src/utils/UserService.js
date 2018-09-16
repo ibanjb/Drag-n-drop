@@ -1,7 +1,7 @@
 //
 // UserService. Has all the logic related to user. For this PoC, only the GET method is implemented
 //
-export default class UserService {
+class UserService {
   constructor() {
     this.serviceUrl = 'https://randomuser.me/api/?nat=gb&results=5';
   }
@@ -23,3 +23,5 @@ export default class UserService {
     return myPromise;
   }
 }
+
+export default UserService;

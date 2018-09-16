@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import UserService from '../../utils/UserService';
 import Drag from '../Drag';
+import UserService from '../../utils/UserService';
 import './Home.css';
 
 //
 // Main container. On this PoC we will have only one main page, called Home
 //
-export default class Home extends Component {
+class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,8 +20,8 @@ export default class Home extends Component {
   // retrieve users from the API service
   //
   getUsers() {
-    this.service = new UserService();
-    this.service.getUsers()
+    const service = new UserService();
+    service.getUsers()
       .then((data) => {
         this.setState({
           isLoading: false,
@@ -81,3 +81,5 @@ export default class Home extends Component {
     );
   }
 }
+
+export default Home;
