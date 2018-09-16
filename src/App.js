@@ -3,6 +3,9 @@ import Home from './containers/Home';
 import logo from './assets/images/logo.png';
 import './App.css';
 
+//
+// starter class
+//
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -11,6 +14,9 @@ export default class App extends Component {
     }
   }
 
+  //
+  // render app
+  //
   render() {
     const { title } = this.state;
     return (

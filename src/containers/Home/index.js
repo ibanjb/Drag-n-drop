@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import UserService from '../../data/UserService';
+import UserService from '../../utils/UserService';
 import Drag from '../Drag';
 import './Home.css';
 
+//
+// Main container. On this PoC we will have only one main page, called Home
+//
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -13,6 +16,9 @@ export default class Home extends Component {
     this.getUsers();
   }
 
+  //
+  // retrieve users from the API service
+  //
   getUsers() {
     this.service = new UserService();
     this.service.getUsers()
@@ -27,6 +33,10 @@ export default class Home extends Component {
         });
       })
       .catch((error) => {
+        //
+        // If there is an error related to the API call, here we will define how to proceed.
+        // We can show an error to the user, generate a log in our system,...
+        //
         console.log('error', error);
         this.setState({
           isLoading: false,
@@ -34,6 +44,9 @@ export default class Home extends Component {
       });
   }
 
+  //
+  // Shows a loading spinner meanwhile data is loading (from getUser method)
+  //
   renderLoading() {
     return (
       <span>
@@ -43,6 +56,9 @@ export default class Home extends Component {
     );
   }
 
+  //
+  // Show the Drag component with the data retrieved 
+  //
   renderItems() {
     const { items } = this.state;
     return (
@@ -52,6 +68,9 @@ export default class Home extends Component {
     );
   }
 
+  //
+  // If is loading, shows renderLoading result, otherwise shows renderItems
+  //
   render() {
     const { isLoading } = this.state;
     return (

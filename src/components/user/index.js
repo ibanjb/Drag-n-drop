@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './User.css';
 
+//
+// User component. Information related with a single user
+//
 class User extends React.Component { 
   
   constructor(props) {
@@ -27,14 +30,15 @@ class User extends React.Component {
           <div>
             <p>{user.email}</p>
           </div>
-        </div>        
-        
-        
+        </div>
       </div>
     );
   }
 }
 
+//
+// user is an object with all the properties related to itself
+//
 User.propTypes  = {
   user: PropTypes.object.isRequired,
 }
