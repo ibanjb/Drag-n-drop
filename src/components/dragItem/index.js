@@ -1,14 +1,21 @@
+// @flow
 import React from 'react';
 import { Droppable, Draggable } from 'react-beautiful-dnd';
-import PropTypes from 'prop-types';
 import User from '../user';
 import dragdrop from '../../assets/images/dragdrop.png';
 import './DragItem.css';
 
+type Props = {
+  items: Array<Object>,
+  type: string,
+  getListStyle: Function,
+  getItemStyle: Function,
+};
+
 //
 // DragItem component. Encapsulate all the information related to an user
 //
-class DragItem extends React.Component {
+class DragItem extends React.PureComponent<Props> {
 
   //
   // If there isn't any user, we will show a 'stylized' empty box
@@ -71,11 +78,8 @@ class DragItem extends React.Component {
   // Check if there aren't any users to display or not to choose with render method must be used
   //
   render() {    
-    const { items } = this.props;
-    let isEmpty = true;
-    if (items.length > 0) {
-      isEmpty = false;
-    }
+    const { items } = this.props;    
+    const isEmpty = items.length === 0;
     return (
       <div>
         {isEmpty && (this.renderEmpty())}
@@ -85,17 +89,5 @@ class DragItem extends React.Component {
   }
 }
 
-//
-// type. Must be one of these values: arrived, interviewed or hired
-// items. A collection of user object
-// getListStyle. function injected to retrieve how the list must be displayed 
-// getItemStyle. same above but for each item
-//
-DragItem.propTypes  = {
-  type: PropTypes.string.isRequired,
-  items: PropTypes.array.isRequired,
-  getListStyle: PropTypes.func.isRequired,
-  getItemStyle: PropTypes.func.isRequired,
-}
 
 export default DragItem;

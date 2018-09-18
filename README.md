@@ -39,11 +39,18 @@ Try to progress as far as you can in 2 hours. Feel free to share your thoughts a
 - documentation: README and inline code comments
 
 
-## WIP. Current status
+## Current status (WIP)
 
-### Missing points
+### Dockerize
 
-- Add flow types (https://flow.org)
+If you want to test it in your local environment, follow the next steps in your favourite terminal:
+- Build docker image:
+   - docker build --rm -f "Dockerfile" -t dragndrop:latest .
+- Run it:
+   - docker run -it -p 80:5000 --rm dragndrop:latest
+- Check it:
+   - docker exec -it [container_id] /bin/bash
+
 
 ### Out of scope
 
@@ -53,6 +60,10 @@ Try to progress as far as you can in 2 hours. Feel free to share your thoughts a
 
 ### Code coverage status
 
-![Coverage](codecoverage.png)
+![CodeCoverage](codecoverage.png)
 
+### Flow coverage at 51% (threshold set to 80% -default-)
 
+![FlowCoverage](flowcoverage.png)
+
+Full report [here](./flow-coverage/index.html) (./flow-coverage/index.html)

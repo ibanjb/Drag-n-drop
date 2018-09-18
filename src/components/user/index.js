@@ -1,22 +1,19 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import './User.css';
+
+type Props = {
+  user: Object
+};
+type State = {};
 
 //
 // User component. Information related with a single user
 //
-class User extends React.Component { 
+class User extends React.PureComponent<Props, State> { 
   
-  constructor(props) {
-    super(props);    
-    const { user } = this.props;
-    this.state = {
-      user: user,
-    }
-  }
-
   render() {
-    const { user } = this.state;
+    const { user } = this.props;    
     return (
       <div className="userBox">
         <img className="img-circle" src={user.picture.thumbnail} alt={user.name.last} />
@@ -34,13 +31,6 @@ class User extends React.Component {
       </div>
     );
   }
-}
-
-//
-// user is an object with all the properties related to itself
-//
-User.propTypes  = {
-  user: PropTypes.object.isRequired,
 }
 
 export default User;

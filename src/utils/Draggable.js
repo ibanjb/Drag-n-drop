@@ -21,12 +21,7 @@ class Draggable  {
       return result;
     }
 
-    setDroppableItemByOrigin(elements, sourceClone, destinationClone) {
-      const {
-        itemsApplied,
-        itemsInterviewed,
-        itemsHired
-      } = this.state;
+    setDroppableItemByOrigin(elements, sourceClone, destinationClone, itemsApplied, itemsInterviewed, itemsHired) {
       let applied = itemsApplied;
       let interviewed = itemsInterviewed;
       let hired = itemsHired;
@@ -69,26 +64,16 @@ class Draggable  {
       });
     }
 
-    moveInside(elements) {
-      const {
-        itemsApplied,
-        itemsInterviewed,
-        itemsHired
-      } = this.state;
+    moveInside(elements, itemsApplied, itemsInterviewed, itemsHired) {
       const items = this.getDroppableItemByOrigin(elements.source.droppableId, itemsApplied, itemsInterviewed, itemsHired);
       const removed = items.splice(elements.source.index, 1)[0];
       items.splice(elements.destination.index, 0, removed);
       const itemArray = Array.from(items);
-      const result = this.setDroppableItemByOrigin(elements, itemArray, null);
+      const result = this.setDroppableItemByOrigin(elements, itemArray, itemsApplied, itemsInterviewed, itemsHired);
       return result;
     }
 
-    moveOutside(elements) {
-      const {
-        itemsApplied,
-        itemsInterviewed,
-        itemsHired
-      } = this.state;
+    moveOutside(elements, itemsApplied, itemsInterviewed, itemsHired) {
       const sourceItems = this.getDroppableItemByOrigin(elements.source.droppableId, itemsApplied, itemsInterviewed, itemsHired);
       const destinationItems = this.getDroppableItemByOrigin(elements.destination.droppableId, itemsApplied, itemsInterviewed, itemsHired);
 

@@ -1,18 +1,27 @@
-import React, { Component } from 'react';
+// @flow
+import React from 'react';
 import Drag from '../Drag';
 import UserService from '../../utils/UserService';
 import './Home.css';
 
+type Props = {};
+type State = {
+  isLoading: boolean,  
+  items:  Object,
+};
+
 //
 // Main container. On this PoC we will have only one main page, called Home
 //
-class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLoading: true,
-      items: null,
-    };
+class Home extends React.PureComponent<Props, State> {
+
+  state = {
+    isLoading: true,
+    items: {},
+  };
+
+  constructor() {
+    super();
     this.getUsers();
   }
 
@@ -37,10 +46,19 @@ class Home extends Component {
         // If there is an error related to the API call, here we will define how to proceed.
         // We can show an error to the user, generate a log in our system,...
         //
-        console.log('error', error);
+        console.log('error', error);        
+
+        //
+        // On this case, we will create an empty items object
+        //
         this.setState({
           isLoading: false,
-        });
+          items: {
+            applied: [],
+            interviewed: [],
+            hired: [],
+          },
+        });        
       });
   }
 

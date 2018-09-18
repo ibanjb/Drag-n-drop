@@ -5,11 +5,11 @@
   "license": "ISC",
   "private": true,
   "dependencies": {
-    "prop-types": "^15.6.2",
     "react": "^16.5.0",
     "react-beautiful-dnd": "^9.0.2",
     "react-dom": "^16.5.0",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "styled-components": "^3.4.8"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
@@ -20,13 +20,28 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
-    "extract-text-webpack-plugin": "^3.0.2"
+    "extract-text-webpack-plugin": "^3.0.2",
+    "flow-bin": "^0.81.0",
+    "flow-coverage-report": "^0.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "coverage": "react-scripts test --coverage",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "flow": "flow",
+    "flow-coverage": "flow-coverage-report -f ./node_modules/.bin/flow"
+  },
+  "flow-coverage-report": {
+    "threshold": 70,
+    "globIncludePatterns": [
+      "src//**/*.js"
+    ],
+    "reportTypes": [
+      "text",
+      "html",
+      "json"
+    ]
   }
 }

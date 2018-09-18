@@ -1,34 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
+import styled from 'styled-components'
 import Home from './containers/Home';
 import logo from './assets/images/logo.png';
 import './App.css';
 
-//
-// starter class
-//
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: 'OpenOceanStudio: Crew Applications',
-    }
-  }
+const Application = styled.div`
+  text-align: center;
+`;
 
-  //
-  // render app
-  //
+//
+// starter class. 
+// Avoid to use the estlint rule stateless on this class
+//
+class App extends React.PureComponent {     // eslint-disable-line react/prefer-stateless-function
   render() {
-    const { title } = this.state;
     return (
-      <div className="App">
+      <Application className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">{title}</h1>
+          <h1 className="App-title">OpenOceanStudio: Crew Applications</h1>
         </header> 
         <div className="content">
           <Home />
         </div>
-      </div>
+      </Application>
     );
   }
 }
+
+export default App;

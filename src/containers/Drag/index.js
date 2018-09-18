@@ -1,14 +1,29 @@
+// @flow
 import React from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
-import PropTypes from 'prop-types';
 import DragItem from '../../components/dragItem';
 import './Drag.css';
 import Draggable from '../../utils/Draggable';
 
+type Props = {
+  items: Object,
+};
+type State = {
+  itemsApplied: Array<Object>,
+  itemsInterviewed: Array<Object>,
+  itemsHired: Array<Object>,
+};
+
 //
 // Drag container. Encapsulate all the logic related to drag'n'drop elements
 //
-class Drag extends React.Component {
+class Drag extends React.PureComponent<Props, State> {
+
+  state = {
+    itemsApplied: [],
+    itemsInterviewed: [],
+    itemsHired: [],
+  };
 
   constructor(props) {
     super(props);
@@ -17,39 +32,35 @@ class Drag extends React.Component {
         itemsApplied: items.applied,
         itemsInterviewed: items.interviewed,
         itemsHired: items.hired,
-    }    
-    this.onDragEnd = this.onDragEnd.bind(this);    
-    this.getListStyle = this.getListStyle.bind(this);
-    this.getItemStyle = this.getItemStyle.bind(this);
-
-    this.draggable = new Draggable();
-    this.moveInside = this.draggable.moveInside.bind(this);
-    this.moveOutside = this.draggable.moveOutside.bind(this);
-    this.getDroppableItemByOrigin = this.draggable.getDroppableItemByOrigin.bind(this);
-    this.setDroppableItemByOrigin = this.draggable.setDroppableItemByOrigin.bind(this);
+    }
   }
   
   //
   // onDragEnd event fired by user
   //
-  onDragEnd(result) {
+  onDragEnd(result: Object) {     
     const { source, destination } = result;
+    const { itemsApplied, itemsInterviewed, itemsHired } = this.state;
+    const draggable = new Draggable();
+    
     // dropped outside the list
-    if (!destination) {
-        return;
-    }
-    // check movement to another column or not
-    if (source.droppableId === destination.droppableId) {
-      this.moveInside(result);
+    if (destination) {        
+      // check movement to another column or not
+      if (source.droppableId === destination.droppableId) {
+        draggable.moveInside(result, itemsApplied, itemsInterviewed, itemsHired);
+      } else {
+        draggable.moveOutside(result, itemsApplied, itemsInterviewed, itemsHired);
+      }
     } else {
-      this.moveOutside(result);
+      // moved to same position
+      return;
     }
-  }  
-
+  }
+  
   //
   // styles when user is dragging an element
   //
-  getListStyle = isDraggingOver => ({
+  getListStyle = (isDraggingOver: boolean) => ({
     background: isDraggingOver ? '#06679a' : '#06679a',
     padding: 8,  
   });
@@ -57,7 +68,7 @@ class Drag extends React.Component {
   //
   // styles for each item
   //
-  getItemStyle = (isDragging, draggableStyle) => ({    
+  getItemStyle = (isDragging: boolean, draggableStyle: Object) => ({    
     userSelect: 'none',
     padding: 16,
     margin: '0 0 8px 0',
@@ -71,6 +82,7 @@ class Drag extends React.Component {
   //
   render() {    
     const { itemsApplied, itemsInterviewed, itemsHired } = this.state;
+    console.log('itemsApplied', itemsApplied);    // remove
     return (
       <div className="container">
         <DragDropContext onDragEnd={this.onDragEnd}>
@@ -90,13 +102,6 @@ class Drag extends React.Component {
       </div>
     );
   }
-}
-
-//
-// items is an object with three colections inside: applied, interviewed and hired
-//
-Drag.propTypes  = {
-  items: PropTypes.object.isRequired,
 }
 
 export default Drag;
