@@ -5,12 +5,11 @@ import './User.css';
 type Props = {
   user: Object
 };
-type State = {};
 
 //
 // User component. Information related with a single user
 //
-class User extends React.PureComponent<Props, State> { 
+class User extends React.PureComponent<Props> { 
   
   render() {
     const { user } = this.props;    
