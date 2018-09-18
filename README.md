@@ -3,12 +3,15 @@
 # Exercise
 
 ![Completed](https://img.shields.io/badge/Completed-99%25-orange.svg) 
-![UnitTest](https://img.shields.io/badge/unit%20tests-jest-brightgreen.svg) 
-![Coverage](https://img.shields.io/badge/test%20coverage-33%25-yellow.svg) 
 ![ES6](https://img.shields.io/badge/React-16.4.1-blue.svg) 
 ![eslint](https://img.shields.io/badge/eslint-air--bnb-%23ff69b4.svg) 
 ![Docker](https://img.shields.io/badge/Docker-Done-brightgreen.svg) 
-![Flow](https://img.shields.io/badge/Flow-Pending-red.svg) 
+
+![UnitTest](https://img.shields.io/badge/unit%20tests-jest-brightgreen.svg) 
+![Coverage](https://img.shields.io/badge/test%20coverage-33%25-yellow.svg) 
+
+![Flow](https://img.shields.io/badge/Flow-Done-brightgreen.svg) 
+![FlowCoverage](https://img.shields.io/badge/flow--coverage-51%25-yellow.svg) 
 
 ### Requirements
 
@@ -38,9 +41,6 @@ Try to progress as far as you can in 2 hours. Feel free to share your thoughts a
 - use of git, appropriate commit messages
 - documentation: README and inline code comments
 
-
-## Current status (WIP)
-
 ### Dockerize
 
 If you want to test it in your local environment, follow the next steps in your favourite terminal:
@@ -50,7 +50,6 @@ If you want to test it in your local environment, follow the next steps in your 
    - docker run -it -p 80:5000 --rm dragndrop:latest
 - Check it:
    - docker exec -it [container_id] /bin/bash
-
 
 ### Out of scope
 
@@ -67,3 +66,4 @@ If you want to test it in your local environment, follow the next steps in your 
 ![FlowCoverage](flowcoverage.png)
 
 Full report [here](./flow-coverage/index.html) (./flow-coverage/index.html)
+

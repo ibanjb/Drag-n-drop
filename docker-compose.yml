@@ -7,4 +7,8 @@ services:
     environment:
       NODE_ENV: production
     ports:
+<<<<<<< HEAD
       - 80:5000
+=======
+      - 80:5000
+>>>>>>> d21ac5eca924a38d2b5e7b62eb54e692180bbeb5
