@@ -33,6 +33,7 @@ class Drag extends React.PureComponent<Props, State> {
         itemsInterviewed: items.interviewed,
         itemsHired: items.hired,
     }
+    this.onDragEnd = this.onDragEnd.bind(this);
   }
   
   //
@@ -46,11 +47,17 @@ class Drag extends React.PureComponent<Props, State> {
     // dropped outside the list
     if (destination) {        
       // check movement to another column or not
+      let moveResult;
       if (source.droppableId === destination.droppableId) {
-        draggable.moveInside(result, itemsApplied, itemsInterviewed, itemsHired);
+        moveResult = draggable.moveInside(result, itemsApplied, itemsInterviewed, itemsHired);
       } else {
-        draggable.moveOutside(result, itemsApplied, itemsInterviewed, itemsHired);
+        moveResult = draggable.moveOutside(result, itemsApplied, itemsInterviewed, itemsHired);
       }
+      this.setState({
+        itemsApplied: moveResult.itemsApplied,
+        itemsInterviewed: moveResult.itemsInterviewed,
+        itemsHired: moveResult.itemsHired,
+      });
     } else {
       // moved to same position
       return;
@@ -82,7 +89,6 @@ class Drag extends React.PureComponent<Props, State> {
   //
   render() {    
     const { itemsApplied, itemsInterviewed, itemsHired } = this.state;
-    console.log('itemsApplied', itemsApplied);    // remove
     return (
       <div className="container">
         <DragDropContext onDragEnd={this.onDragEnd}>

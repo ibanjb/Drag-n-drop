@@ -57,11 +57,11 @@ class Draggable  {
             break;
         }
       }
-      this.setState({
-        itemsApplied: applied,
-        itemsInterviewed: interviewed,
-        itemsHired: hired,
-      });
+      return {
+        itemsApplied: applied ? applied : [],
+        itemsInterviewed: interviewed ? interviewed : [],
+        itemsHired: hired ? hired : [],
+      };
     }
 
     moveInside(elements, itemsApplied, itemsInterviewed, itemsHired) {
@@ -88,7 +88,7 @@ class Draggable  {
         destinationClone.splice(elements.destination.index, 0, removed);
       }
 
-      const result = this.setDroppableItemByOrigin(elements, sourceClone, destinationClone);
+      const result = this.setDroppableItemByOrigin(elements, sourceClone, destinationClone, itemsApplied, itemsInterviewed, itemsHired);
       return result;
     }
 }
